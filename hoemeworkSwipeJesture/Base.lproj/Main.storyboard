@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hoemeworkSwipeJesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warau" translatesAutoresizingMaskIntoConstraints="NO" id="z1W-Ld-p4I">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="I0x-MC-HgI" appends="YES" id="WGg-NF-Xjt"/>
+                                    <outletCollection property="gestureRecognizers" destination="jzd-Zq-WLM" appends="YES" id="dIg-dG-4uO"/>
+                                    <outletCollection property="gestureRecognizers" destination="2h5-7U-3uA" appends="YES" id="L4M-Ui-10I"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z1W-Ld-p4I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4cH-jM-roh"/>
+                            <constraint firstAttribute="trailing" secondItem="z1W-Ld-p4I" secondAttribute="trailing" id="FSu-fz-5AY"/>
+                            <constraint firstItem="z1W-Ld-p4I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qx7-sa-zY0"/>
+                            <constraint firstItem="z1W-Ld-p4I" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lGI-c3-xKq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="I0x-MC-HgI">
+                    <connections>
+                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="3Vu-UJ-rON"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="jzd-Zq-WLM">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="BCL-4p-rfF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="2h5-7U-3uA">
+                    <connections>
+                        <action selector="longPressGesture:" destination="BYZ-38-t0r" id="v3P-bN-Y4J"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-78.75" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="warau" width="1132" height="822"/>
+    </resources>
+</document>
